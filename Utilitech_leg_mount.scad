@@ -13,11 +13,11 @@ mount_height=6;
 //post
 post_height = mount_height + 2.5;
 post_radius = 4.25;
-post_hole_dia = 5.5;
+post_hole_dia = 6.5;
 
 // nut dimensions, pretending it's a circle
 // The original part is threaded with an M6
-nut_radius = 5;
+nut_radius = 12/2;
 nut_height = 5;
 nut_res=6;
 
@@ -38,7 +38,7 @@ difference(){
 
     // post nut
     rotate([0, 0, 90]) {
-        cylinder(r=nut_radius, h=nut_height, center=true, $fn=nut_res);        
+        cylinder(r=nut_radius, h=nut_height, $fn=nut_res);        
     }  
     
     // post hole
